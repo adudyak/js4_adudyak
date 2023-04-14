@@ -6,7 +6,7 @@ const NEW_USER = {
     email: Date.now() + '@test.com',
 };
 
-Scenario('register new user',  ({ I, basePage, registerPage }) => {
+Scenario('register new user', ({ I, basePage, registerPage }) => {
     I.amOnPage('http://opencart.qatestlab.net/index.php');
     basePage.clickMyAccountSpoiler();
     basePage.clickMyRegisterLink();
@@ -15,8 +15,8 @@ Scenario('register new user',  ({ I, basePage, registerPage }) => {
     pause();
 });
 
-xScenario('grab price',  async ({ I }) => {
+xScenario('grab price', async ({ I }) => {
     I.amOnPage('http://opencart.qatestlab.net/index.php?route=product/product&path=20_264&product_id=29');
-    const price = await I.grabTextFrom({xpath: '//*[@id="content"]/div[1]/div[2]/div/div[1]/span[1]'});
+    const price = await I.grabTextFrom({ xpath: '//*[@id="content"]/div[1]/div[2]/div/div[1]/span[1]' });
     console.log(+price.slice(1));
 });
