@@ -20,4 +20,5 @@ Scenario('buy product', ({ I, basePage }) => {
     //npm i codeceptjs-chai - install chai, https://www.npmjs.com/package/codeceptjs-chai
     I.assertEqual(totalPrice + shippingRate, checkoutPrice, "Prices are not in match");
     //verify final text "Your order has been placed!";
+    //
 }).tag("buy");
