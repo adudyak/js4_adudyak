@@ -5,7 +5,7 @@ const USER = {
 
 Feature('purchase');
 
-Scenario('buy product', ({ I, basePage }) => {
+Scenario('buy product', ({ I, basePage, /*TEST TEST*/ }) => {
     I.login(USER);
     I.amOnPage("http://opencart.qatestlab.net/index.php?route=product/product&product_id=43");
     //add method to clear cart - .grabNumberOfVisibleElements();
