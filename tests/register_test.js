@@ -7,6 +7,7 @@ const NEW_USER = {
 };
 
 Scenario('register new user', ({ I, basePage, registerPage }) => {
+    //test
     I.openStore();
     basePage.clickMyAccountSpoiler();
     basePage.clickMyRegisterLink();
