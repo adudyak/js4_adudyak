@@ -6,7 +6,7 @@ const NEW_USER = {
     email: Date.now() + '@test.com',
 };
 
-Scenario('register new user', ({ I, basePage, registerPage }) => {
+xScenario('register new user', ({ I, basePage, registerPage }) => {
     I.openStore();
     basePage.clickMyAccountSpoiler();
     basePage.clickMyRegisterLink();

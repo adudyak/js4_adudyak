@@ -23,12 +23,17 @@ exports.config = {
     },
     "ChaiWrapper": {
       "require": "codeceptjs-chai"
-  }
+    }
   },
   include: {
     I: './steps_file.js',
     basePage: "./pages/base.js",
-    registerPage: "./pages/register.js"
+    registerPage: "./pages/register.js",
+    productPage: "./pages/product.js"
+  },
+  tryTo: {
+    enabled: true,
+    pauseOnFail: {},
   },
   name: 'js4_adudyak'
 }
