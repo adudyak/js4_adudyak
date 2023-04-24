@@ -1,3 +1,8 @@
+/**
+ * reporter
+ * pause in browser
+ * alt + shift + f
+ */
 let accounts = new DataTable(['login', 'password']); //
 accounts.add(['davert', '123456']); // adding records to a table
 accounts.add(['admin', '123456']);
