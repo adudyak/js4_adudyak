@@ -25,7 +25,7 @@ jobs:
         run: npm i
       
       - name: Run tests
-        run: npx codeceptjs run --headed false --reporter mochawesome
+        run: npx codeceptjs run --reporter mochawesome
 
       - name: Publish test results
         uses: actions/download-artifact@v3
