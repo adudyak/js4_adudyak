@@ -25,4 +25,10 @@ jobs:
         run: npm i
       
       - name: Run tests
-        run: npm run codeceptjs:headless
+        run: npx codeceptjs run --headed false --reporter mochawesome
+
+      - name: Publish test results
+        uses: actions/download-artifact@v3
+          with:
+            name: test-results
+            path: output/

@@ -46,5 +46,10 @@ exports.config = {
     enabled: true,
     pauseOnFail: {},
   },
+  "mocha": {
+    "reporterOptions": {
+        "reportDir": "output"
+    }
+  },
   name: 'js4_adudyak'
 }
