@@ -1,5 +1,4 @@
-name: Run code on server
-run-name: Run tests
+name: Store test
 
 on:
   workflow_dispatch:

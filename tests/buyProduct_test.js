@@ -2,6 +2,9 @@
  * reporter
  * pause in browser
  * alt + shift + f
+ * Github Actions https://docs.github.com/en/actions
+ * 
+ * https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts
  */
 let accounts = new DataTable(['login', 'password']); //
 accounts.add(['davert', '123456']); // adding records to a table
