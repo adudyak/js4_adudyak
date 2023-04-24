@@ -23,13 +23,24 @@ exports.config = {
     },
     "ChaiWrapper": {
       "require": "codeceptjs-chai"
-    }
+    },
+    PageHelper: {
+      require: './helpers/pageHelper_helper.js',
+    },
+    REST: {
+      defaultHeaders: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+    },
+    JSONResponse: {},
   },
   include: {
     I: './steps_file.js',
     basePage: "./pages/base.js",
     registerPage: "./pages/register.js",
-    productPage: "./pages/product.js"
+    productPage: "./pages/product.js",
+    helper: "./helpers/helper.js",
   },
   tryTo: {
     enabled: true,
