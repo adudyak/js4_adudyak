@@ -15,4 +15,4 @@ jobs:
         run: npm i
       
       - name: Run tests
-        run: npx codeceptjs run
+        run: npm run codeceptjs:headless
