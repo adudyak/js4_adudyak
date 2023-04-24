@@ -4,10 +4,11 @@ run-name: Run tests
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        - main
+      branch: 
+        default: 'main'
 
 concurrency:
+  group: ${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
