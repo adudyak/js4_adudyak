@@ -12,8 +12,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  Run-tests:
+  test:
     runs-on: ubuntu-latest
+    env:
+      HEADLESS: true
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
