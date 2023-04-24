@@ -57,8 +57,7 @@ Data(urlArray).Scenario('buy product', async ({ I, helper, current, productPage 
 
 Scenario.only('rest api', async ({ I }) => {
     const response = await I.sendGetRequest("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=USD&json");
-    I.seeResponseCodeIs(500);
-    console.log(response);
+    I.seeResponseCodeIs(200);
     const usdRate = response.data[0].rate;
     console.log("Price in UAH is: " + 80.00 * usdRate);
     const postResponse = await I.sendPostRequest("https://jsonplaceholder.typicode.com/posts", `{
