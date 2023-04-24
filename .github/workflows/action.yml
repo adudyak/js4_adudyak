@@ -1,17 +1,26 @@
 name: Run code on server
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+run-name: Run tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        - main
+
+concurrency:
+  cancel-in-progress: true
+
 jobs:
-  Explore-GitHub-Actions:
+  Run-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
       
-      - name: Setup node
+      - name: Setup NodeJS
         uses: actions/setup-node@v3
       
-      - name: Install modules
+      - name: Install dependencies
         run: npm i
       
       - name: Run tests
