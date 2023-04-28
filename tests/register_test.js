@@ -6,13 +6,12 @@ const NEW_USER = {
     email: Date.now() + '@test.com',
 };
 
-xScenario('register new user', ({ I, basePage, registerPage }) => {
+Scenario('register new user', ({ I, basePage, registerPage }) => {
     I.openStore();
     basePage.clickMyAccountSpoiler();
     basePage.clickMyRegisterLink();
     registerPage.verifyRegisterPage();
     registerPage.fillNewUserForm(NEW_USER);
-    pause();
 });
 
 xScenario('grab price', async ({ I }) => {

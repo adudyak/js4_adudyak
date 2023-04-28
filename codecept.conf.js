@@ -48,7 +48,8 @@ exports.config = {
   },
   "mocha": {
     "reporterOptions": {
-        "reportDir": "output"
+        "reportDir": "output",
+        "reportFilename": "[status]_[datetime]-[name]-report"
     }
   },
   name: 'js4_adudyak'

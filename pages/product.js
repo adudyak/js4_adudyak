@@ -1,9 +1,15 @@
 const { I } = inject();
 
 module.exports = {
+  // Label
+  color: {
+    green: "green",
+  },
   colorLabel: { xpath: '//label[text()="Color"]' },
 
+
   async checkColorExists() {
+    //I.click(this.color.green);
     return await I.checkElementExists(this.colorLabel);
     return await tryTo(() => I.seeElement(this.colorLabel));
   },
@@ -20,7 +26,7 @@ module.exports = {
   },
 
   async getColorPrice() {
-    const priceAsString =  await I.grabTextFrom(locatorOfPrice);
+    const priceAsString = await I.grabTextFrom(locatorOfPrice);
     return I.parsePrice(priceAsString);
   }
 }
