@@ -4,6 +4,9 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    env:
+      HEADLESS: true
+      
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
