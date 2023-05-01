@@ -42,9 +42,7 @@ exports.config = {
     productPage: "./pages/product.js",
     helper: "./helpers/helper.js",
   },
-  tryTo: {
-    enabled: true,
-    pauseOnFail: {},
+  pauseOnFail: {},
   },
   "mocha": {
     "reporterOptions": {
