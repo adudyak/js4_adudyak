@@ -1,31 +1,22 @@
-name: Store test
-
-on:
-  workflow_dispatch:
-    inputs:
-      branch: 
-        default: 'main'
-
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: true
-
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
 jobs:
-  test:
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     env:
       HEADLESS: true
-
+      
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      
+
       - name: Setup NodeJS
         uses: actions/setup-node@v3
-      
+
       - name: Install dependencies
         run: npm i
-      
+
       - name: Run tests
         run: npx codeceptjs run --reporter mochawesome
 
