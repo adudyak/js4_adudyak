@@ -43,11 +43,10 @@ exports.config = {
     helper: "./helpers/helper.js",
   },
   pauseOnFail: {},
-  },
   "mocha": {
     "reporterOptions": {
-        "reportDir": "output",
-        "reportFilename": "[status]_[datetime]-[name]-report"
+      "reportDir": "output",
+      "reportFilename": "[status]_[datetime]-[name]-report"
     }
   },
   name: 'js4_adudyak'
